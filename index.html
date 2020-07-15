@@ -15,10 +15,9 @@
 <script>    
     $Lightning.use("c:lightningOut", function()
     {
-        $Lightning.createComponent("c:parentPageComponent",{
-                locationId:"{!$CurrentPage.parameters.locationId}"
-            },
-            "locations",
+        $Lightning.createComponent("c:testLWC",{
+             },
+            "lightning",
             function(cmp)
             {
                 console.log('component created');
