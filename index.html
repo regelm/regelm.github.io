@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+
+<p>This is a test!</p>
+
+<div id="lightning"></div>
+<script src="https://drtavel--matchbook.lightning.force.com/lightning/lightning.out.js"></script>
+
+<script>    
+    $Lightning.use("c:lightningOut", function()
+    {
+        $Lightning.createComponent(
+        "c:parentPageComponent",
+        {locationId:"{!$CurrentPage.parameters.locationId}"},
+        "locations",
+        function(cmp)
+        {
+            console.log('component created');
+        });
+    });
+</script>
+
+</body>
+</html>
