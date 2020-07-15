@@ -10,20 +10,23 @@
 <p>This is a test!</p>
 
 <div id="lightning"></div>
-<script src="https://drtavel--matchbook.lightning.force.com/lightning/lightning.out.js"></script>
+<script src="https://matchbook-drtavel.cs24.force.com/lightning/lightning.out.js"></script>
 
 <script>    
     $Lightning.use("c:lightningOut", function()
     {
-        $Lightning.createComponent(
-        "c:parentPageComponent",
-        {locationId:"{!$CurrentPage.parameters.locationId}"},
-        "locations",
-        function(cmp)
-        {
-            console.log('component created');
-        });
-    });
+        $Lightning.createComponent("c:parentPageComponent",{
+                locationId:"{!$CurrentPage.parameters.locationId}"
+            },
+            "locations",
+            function(cmp)
+            {
+                console.log('component created');
+            }
+        );
+    },
+    "https://matchbook-drtavel.cs24.force.com/"
+    );
 </script>
 
 </body>
