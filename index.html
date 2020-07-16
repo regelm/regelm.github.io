@@ -5,9 +5,7 @@
 </head>
 <body>
 
-<h1>Hello World!</h1>
-
-<p>This is a test!</p>
+<h1 style="text-align: center;">Lightning Out Testing</h1>
 
 <div id="lightning"></div>
 <script src="https://matchbook-drtavel.cs24.force.com/lightning/lightning.out.js"></script>
@@ -16,8 +14,9 @@
     $Lightning.use("c:lightningOut", function()
     {
         $Lightning.createComponent("c:parentPageComponent",{
-             },
-            "lightning",
+                locationId:"{!$CurrentPage.parameters.locationId}"
+            },
+            "locations",
             function(cmp)
             {
                 console.log('component created');
