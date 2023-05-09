@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0096/7472.js" async="async"></script>
+<!-- <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0096/7472.js" async="async"></script> -->
 <title>Lightning Web Component Test</title>
 </head>
 <body>
 
 <h1 style="text-align: center;">Lightning Out Testing</h1>
 
-<form action="">
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <input type="submit" value="Submit">
-</form>
-
 <div id="lightning"></div>
-<script src="https://matchbook-drtavel.cs24.force.com/lightning/lightning.out.js"></script>
+<script src="https://transformationscarenetwork--galvindev.sandbox.my.site.com/lightning/lightning.out.js"></script>
 
 <script>    
-    $Lightning.use("c:lightningOut", function()
+    $Lightning.use("c:PublicApp", function()
     {
-        $Lightning.createComponent("c:parentPageComponent",{
-                locationId:"{!$CurrentPage.parameters.locationId}"
-            },
+        $Lightning.createComponent("c:testComponent",{},
             "lightning",
             function(cmp)
             {
@@ -32,7 +22,7 @@
             }
         );
     },
-    "https://matchbook-drtavel.cs24.force.com/"
+    "https://transformationscarenetwork--galvindev.sandbox.my.site.com/"
     );
 </script>
 
