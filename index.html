@@ -3,26 +3,30 @@
 <head>
 <!-- <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0096/7472.js" async="async"></script> -->
 <title>Lightning Web Component Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body>
     
 <div id="lightning"></div>
-<script src="https://transformationscarenetwork--galvindev.sandbox.my.salesforce-sites.com/lightning/lightning.out.js"></script>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-<script>    
-    $Lightning.use("c:PublicApp", function()
-    {
-        $Lightning.createComponent("c:testComponent",{},
-            "lightning",
-            function(cmp)
-            {
-                console.log('component created');
-            }
-        );
-    },
-    "https://transformationscarenetwork--galvindev.sandbox.my.salesforce-sites.com"
-    );
+			embeddedservice_bootstrap.init(
+				'00DO400000Pw4o1',
+				'Enhanced_Sven_Deployment',
+				'https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723',
+				{
+					scrt2URL: 'https://sevencorners--fullcopy.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
+<script type='text/javascript' src='https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
