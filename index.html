@@ -1,35 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0096/7472.js" async="async"></script> -->
-<title>Lightning Web Component Test</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta charset="UTF-8">
+    <title>Lightning Web Component Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        /* Container to center the main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Styling the text card */
+        .card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Typography */
+        h1 {
+            margin-top: 0;
+            color: #1a202c;
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Small badge to indicate it's a test environment */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background-color: #ebf8ff;
+            color: #3182ce;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
-    
-<div id="lightning"></div>
-	<div>
-		<h1>Chat Test Page</h1>
-	</div>
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DO400000Pw4o1',
-				'Enhanced_Sven_Deployment',
-				'https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723',
-				{
-					scrt2URL: 'https://sevencorners--fullcopy.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <div class="main-content">
+        <div class="card">
+            <span class="badge">Testing Environment</span>
+            <h1>Chat Test Page</h1>
+            <p>Welcome to the Sven test site. The embedded messaging widget should appear shortly.</p>
+            <div id="lightning"></div>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DO400000Pw4o1',
+                    'Enhanced_Sven_Deployment',
+                    'https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723',
+                    {
+                        scrt2URL: 'https://sevencorners--fullcopy.sandbox.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
